@@ -1,0 +1,114 @@
+/* cadastro.css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0B3D6D, #062a4b);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: white;
+  min-height: 100vh;
+}
+
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.cadastro-box {
+  background-color: #F8F7F5;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  color: #0B3D6D;
+  text-align: center;
+}
+
+.logo {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.cadastro-box h2 {
+  margin-bottom: 25px;
+}
+
+.cadastro-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cadastro-box input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+.cadastro-box button {
+  background-color: #0B3D6D;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cadastro-box button:hover {
+  background-color: #062a4b;
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #0B3D6D;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+  .cadastro-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px 10px;
+  }
+
+  .cadastro-box {
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 6px;
+  }
+
+  .cadastro-box h2 {
+    font-size: 20px;
+  }
+
+  .cadastro-box input,
+  .cadastro-box button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+}

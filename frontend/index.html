@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synx - Seu universo tech</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/topbar.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/banner.css" />
+    <link rel="stylesheet" href="css/produtos.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+    <!-- 🔝 Topbar -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <span>🏙️ São Paulo/SP</span>
+        </div>
+        <div class="topbar-right">
+            <a href="ajuda.html">🆘 Ajuda</a>
+
+            <!-- Área de login dinâmica -->
+            <div id="usuario-logado" class="usuario-dropdown" style="display: none;">
+                <button id="btn-usuario">👤 <span id="nome-usuario">Usuário</span> ⌄</button>
+                <div class="usuario-menu">
+                    <a href="usuario.html">🤵 Painel do Usuário</a>
+                    <button id="sair-btn">Sair</button>
+                </div>
+            </div>
+
+            <!-- Área visível antes de logar -->
+            <div id="usuario-nao-logado">
+                <a href="login.html">👤 Entrar</a>
+            </div>
+            <div id="cadastrar-usuario">
+                <a href="cadastro.html">📝 Cadastrar</a>
+            </div>
+            <!-- Carrinho Dropdown -->
+            <div class="carrinho-dropdown">
+                <button id="btn-carrinho">🛒 Carrinho <span id="contador-carrinho">(0)</span></button>
+                <div class="carrinho-menu" id="carrinho-menu">
+                    <p class="vazio">Seu carrinho está vazio.</p>
+                    <ul id="lista-carrinho"></ul>
+                    <div id="total-carrinho"></div>
+                    <button class="btn-finalizar" id="finalizar-compra">Finalizar Compra</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 📂 Header principal -->
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html"><img src="https://onrtrcumlywhfsakvqrv.supabase.co/storage/v1/object/sign/imagens/synx-logo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xMWY2ZTgyOS1kN2VlLTQzYTYtODNjNC0wMzUyZDBkNmMzZTYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZW5zL3N5bngtbG9nby5wbmciLCJpYXQiOjE3NDg5OTQ5NjcsImV4cCI6MTc4MDUzMDk2N30.igsLBhywaKibuGXU9ckz-NupVZwtt-5c-kHTz9V8mSs" alt="Logo Synx" class="logo-icon" /></a>
+            <span class="logo-text">Synx</span>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar produtos..." class="search-bar" />
+            <button class="search-btn">🔍</button>
+        </div>
+
+    </header>
+
+    <!-- 📁 Menu de categorias -->
+    <nav class="menu-categorias">
+        <div class="dropdown">
+            <button class="dropbtn">☰ Todas as categorias</button>
+            <div class="dropdown-content">
+                <a href="#">📱 Celulares</a>
+                <a href="#">💻 Informática</a>
+                <a href="#">🕹️ Games</a>
+                <a href="#">🎧 Áudio</a>
+                <a href="#">🏠 Casa Inteligente</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🟥 Banner Promocional -->
+    <section class="banner-principal">
+        <img src="https://onrtrcumlywhfsakvqrv.supabase.co/storage/v1/object/sign/imagens/banner1.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xMWY2ZTgyOS1kN2VlLTQzYTYtODNjNC0wMzUyZDBkNmMzZTYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZW5zL2Jhbm5lcjEuanBnIiwiaWF0IjoxNzQ4OTk0OTQxLCJleHAiOjE3ODA1MzA5NDF9.pvBENYG4s7f6ZhwMiYo8Rl3Do5eJNUDIzi7czwDLD_A" alt="Promoção" />
+    </section>
+
+
+    <!-- 🛍️ Seção de Produtos -->
+    <main class="secao-produtos">
+        <h2>Ofertas do Dia</h2>
+        <div class="grid-produtos">
+            <div class="card-produto">
+                <img src="img/produto1.avif" alt="Produto" />
+                <h3>Kit LED RGB 5050</h3>
+                <p class="preco">R$ 29,99</p>
+                <button class="btn-adicionar-carrinho" data-nome="Kit LED RGB 5050" data-preco="29.99"
+                    data-imagem="img/produto1.avif">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="img/produto2.avif" alt="Produto" />
+                <h3>Fone Bluetooth</h3>
+                <p class="preco">R$ 59,90</p>
+                <button class="btn-adicionar-carrinho" data-nome="Fone Bluetooth" data-preco="59.90"
+                    data-imagem="img/produto2.avif">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="img/produto3.avif" alt="Produto" />
+                <h3>Mouse Bluetooth sem fio T90 RGB</h3>
+                <p class="preco">R$ 199,00</p>
+                <button class="btn-adicionar-carrinho" data-nome="Mouse Bluetooth T90 RGB" data-preco="199.00"
+                    data-imagem="img/produto3.avif">Adicionar ao Carrinho</button>
+            </div>
+    </main>
+
+    <!-- 🔻 Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 Synx - Seu universo tech começa aqui</p>
+    </footer>
+    <script src="js/carrinho.js"></script>
+    <script src="js/usuarioMenu.js"></script>
+
+</body>
+
+</html>

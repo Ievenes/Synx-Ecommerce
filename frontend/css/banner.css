@@ -1,0 +1,36 @@
+.banner-principal {
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #dee2e6;
+  height: auto;
+}
+
+.banner-principal img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .banner-principal {
+    padding: 10px;
+  }
+
+  .banner-principal img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-principal {
+    padding: 5px;
+  }
+
+  .banner-principal img {
+    border-radius: 0;
+  }
+}

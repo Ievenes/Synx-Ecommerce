@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajuda - Synx</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/topbar.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/ajuda.css" />
+</head>
+
+<body>
+
+    <!-- 🔝 Topbar -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <span>🏙️ São Paulo/SP</span>
+        </div>
+        <div class="topbar-right">
+            <a href="ajuda.html">🆘 Ajuda</a>
+
+            <!-- Área de login dinâmica -->
+            <div id="usuario-logado" class="usuario-dropdown" style="display: none;">
+                <button id="btn-usuario">👤 <span id="nome-usuario">Usuário</span> ⌄</button>
+                <div class="usuario-menu">
+                    <a href="usuario.html">Painel do Usuário</a>
+                    <button id="sair-btn">Sair</button>
+                </div>
+            </div>
+            <!-- Área visível antes de logar -->
+            <div id="usuario-nao-logado">
+                <a href="login.html">👤 Entrar</a>
+                </div>
+            <div id="cadastrar-usuario">
+                <a href="cadastro.html">📝 Cadastrar</a>
+            </div>
+            <a href="#">🛒 Carrinho</a>
+        </div>
+    </div>
+
+    <!-- 📂 Header -->
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html"><img src="https://onrtrcumlywhfsakvqrv.supabase.co/storage/v1/object/sign/imagens/synx-logo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xMWY2ZTgyOS1kN2VlLTQzYTYtODNjNC0wMzUyZDBkNmMzZTYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZW5zL3N5bngtbG9nby5wbmciLCJpYXQiOjE3NDg5OTQ5NjcsImV4cCI6MTc4MDUzMDk2N30.igsLBhywaKibuGXU9ckz-NupVZwtt-5c-kHTz9V8mSs" alt="Logo Synx" class="logo-icon" /></a>
+            <span class="logo-text">Synx</span>
+        </div>
+        <input type="text" placeholder="Buscar ajuda..." class="search-bar" />
+        <button class="search-btn">🔍</button>
+    </header>
+
+    <!-- 📋 Conteúdo de Ajuda -->
+    <main class="conteudo-ajuda">
+        <h2>Central de Ajuda</h2>
+        <div class="topicos-ajuda">
+            <div class="topico">
+                <h3>Problemas com pedidos</h3>
+                <p>Saiba o que fazer se você não recebeu o produto, recebeu com defeito ou está com dúvidas na entrega.
+                </p>
+            </div>
+            <div class="topico">
+                <h3>Pagamentos e Reembolsos</h3>
+                <p>Informações sobre métodos de pagamento, boletos, cartão de crédito e como funciona o reembolso.</p>
+            </div>
+            <div class="topico">
+                <h3>Minha conta</h3>
+                <p>Ajuda para acessar sua conta, recuperar senha ou alterar seus dados pessoais.</p>
+            </div>
+            <div class="topico">
+                <h3>Garantia e Devoluções</h3>
+                <p>Saiba como funciona a política de devoluções e os prazos de garantia dos produtos.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 🔻 Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 Synx - Seu universo tech começa aqui</p>
+    </footer>
+    <script src="js/usuarioMenu.js"></script>
+</body>
+
+</html>

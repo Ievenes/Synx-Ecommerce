@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finalizar Compra - Synx</title>
+    <link rel="stylesheet" href="css/checkout.css" />
+</head>
+
+<body>
+    <div class="checkout-container">
+        <h1>Finalizar Compra</h1>
+
+        <section id="resumo-carrinho">
+            <h2>Resumo do Pedido</h2>
+            <ul id="lista-checkout"></ul>
+            <p id="total-checkout"></p>
+        </section>
+
+        <section id="endereco-entrega">
+            <h2>Endereço de Entrega</h2>
+            <form id="form-enderecos">
+                <div id="lista-enderecos">
+                    <p>🔄 Carregando...</p>
+                </div>
+            </form>
+
+        </section>
+
+        <button id="confirmar-pedido">Confirmar Pedido</button>
+    </div>
+
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>

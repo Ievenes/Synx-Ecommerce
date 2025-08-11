@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área do Usuário - Synx</title>
+  <link rel="stylesheet" href="css/usuario.css" />
+</head>
+
+<body>
+  <div class="painel-container">
+    <aside class="painel-menu">
+      <div class="perfil-logo">
+        <a href="index.html" class="logo-link">
+          <img src="https://onrtrcumlywhfsakvqrv.supabase.co/storage/v1/object/sign/imagens/synx-logo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xMWY2ZTgyOS1kN2VlLTQzYTYtODNjNC0wMzUyZDBkNmMzZTYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZW5zL3N5bngtbG9nby5wbmciLCJpYXQiOjE3NDg5OTQ5NjcsImV4cCI6MTc4MDUzMDk2N30.igsLBhywaKibuGXU9ckz-NupVZwtt-5c-kHTz9V8mSs" alt="Synx Logo" class="logo" />
+        </a>
+        <p class="nome-usuario-menu" id="nomeUsuarioMenu">Usuário</p>
+        <a href="#" class="editar-perfil">✎ Editar Perfil</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" data-aba="dados" class="ativo">Perfil</a></li>
+          <li><a href="#" data-aba="endereco">Endereços</a></li>
+          <li><a href="#" data-aba="pedidos">Pedidos</a></li>
+          <li><button id="sair">Sair</button></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="painel-conteudo">
+      <section id="dados" class="aba ativa">
+        <h2>Meu Perfil</h2>
+        <p class="descricao">Gerencie e proteja sua conta</p>
+        <div class="foto-perfil">
+          <img src="https://onrtrcumlywhfsakvqrv.supabase.co/storage/v1/object/sign/imagens/avatar-default.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xMWY2ZTgyOS1kN2VlLTQzYTYtODNjNC0wMzUyZDBkNmMzZTYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZW5zL2F2YXRhci1kZWZhdWx0LnBuZyIsImlhdCI6MTc0ODk5NDkwNCwiZXhwIjoxNzgwNTMwOTA0fQ.vJ88MjgZHa9LXvCq72DmONYeGkZYrWdflmAy1V_YJgc" alt="Foto de Perfil" class="avatar" />
+        </div>
+        <div class="selecionar-perfil">
+          <button class="botao-novo-perfil">Selecionar nova imagem</button>
+        </div>
+        <form id="form-perfil" class="form-perfil">
+          <div class="linha">
+            <label>Nome</label>
+            <input type="text" id="nomeUsuarioInput" disabled/>
+          </div>
+          <div class="linha">
+            <label>Email</label>
+            <input type="email" id="emailUsuario" disabled />
+          </div>
+          <div class="linha">
+            <label>Telefone</label>
+            <input type="text" id="telefoneUsuario" disabled />
+          </div>
+          <div class="linha">
+            <label>Data de Nascimento</label>
+            <input type="text" id="dataNascimentoUsuario" disabled />
+          </div>
+          <div class="linha">
+            <label>CPF</label>
+            <input type="text" id="cpfUsuario" disabled />
+          </div>
+          <div class="linha">
+            <label>Gênero</label>
+            <input type="text" id="generoUsuario" disabled />
+          </div>
+        </form>
+      </section>
+
+      <section id="endereco" class="aba">
+        <div class="topo-endereco">
+          <h3>📍 Endereços Cadastrados</h3>
+          <button id="btn-toggle-form" class="botao-adicionar">➕ Adicionar Novo Endereço</button>
+        </div>
+
+        <div id="lista-enderecos" class="enderecos-container"></div>
+
+        <!-- Modal do formulário -->
+        <div id="modal-endereco" class="modal">
+          <div class="modal-conteudo">
+            <span class="modal-fechar" id="fechar-modal">&times;</span>
+            <h4>📬 Cadastro de Endereço</h4>
+            <form id="form-endereco" class="form-endereco">
+              <div class="form-linha">
+                <input type="text" id="cep" placeholder="CEP" required />
+              </div>
+              <div class="form-linha">
+                <input type="text" id="rua" placeholder="Rua" required />
+                <input type="text" id="numero" placeholder="Número" required />
+              </div>
+              <div class="form-linha">
+                <input type="text" id="complemento" placeholder="Complemento" />
+                <input type="text" id="bairro" placeholder="Bairro" required />
+              </div>
+              <div class="form-linha">
+                <input type="text" id="cidade" placeholder="Cidade" required />
+                <input type="text" id="estado" placeholder="Estado (UF)" maxlength="2" required />
+              </div>
+              <div class="form-botoes">
+                <button type="submit" class="botao-salvar">📏 Salvar Endereço</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="pedidos" class="aba">
+        <h3>Pedidos</h3>
+        <p>📦 Em construção...</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/usuario.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+/* footer.css */
+
+.footer {
+  background-color: #0B3D6D;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  border-top: 4px solid #062a4b;
+}
+
+.footer p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 12px 5px;
+    font-size: 12px;
+  }
+}

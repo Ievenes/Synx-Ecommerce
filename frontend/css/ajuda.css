@@ -1,0 +1,47 @@
+/* ajuda.css */
+
+.conteudo-ajuda {
+  padding: 50px 30px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.conteudo-ajuda h2 {
+  color: #0B3D6D;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.topicos-ajuda {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.topico {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.topico:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.topico h3 {
+  color: #0B3D6D;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.topico p {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}

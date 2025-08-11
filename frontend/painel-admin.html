@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel do Administrador - Synx</title>
+  <link rel="stylesheet" href="css/usuario.css" />
+</head>
+
+<body>
+  <div class="painel-container">
+    <!-- Sidebar do admin -->
+    <aside class="painel-menu">
+      <div class="perfil-logo">
+        <a href="index.html" class="logo-link">
+          <img src="https://onrtrcumlywhfsakvqrv.supabase.co/storage/v1/object/sign/imagens/synx-logo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8xMWY2ZTgyOS1kN2VlLTQzYTYtODNjNC0wMzUyZDBkNmMzZTYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZW5zL3N5bngtbG9nby5wbmciLCJpYXQiOjE3NDg5OTQ5NjcsImV4cCI6MTc4MDUzMDk2N30.igsLBhywaKibuGXU9ckz-NupVZwtt-5c-kHTz9V8mSs" alt="Synx Logo" class="logo" />
+        </a>
+        <p class="nome-usuario-menu" id="nomeUsuarioMenu">Administrador</p>
+        <a href="usuario.html" class="editar-perfil">↩ Voltar para Perfil</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" data-aba="usuarios" class="ativo">👥 Usuários</a></li>
+          <li><a href="#" data-aba="produtos">📦 Produtos</a></li>
+          <li><button id="sair">Sair</button></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="painel-conteudo">
+      <section id="usuarios" class="aba ativa">
+        <h2>Gerenciar Usuários</h2>
+        <p class="descricao">Atualize o nível de acesso dos usuários cadastrados</p>
+        <div class="topo-endereco">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <h3 style="margin: 0;">📋 Lista de Usuários</h3>
+          </div>
+          <div style="display: flex; gap: 5px; flex-wrap: wrap; align-items: center;">
+            <button id="btn-adicionar-usuario" class="botao-adicionar">➕ Cadastrar Usuário</button>
+          </div>
+          <div style="display: flex; gap: 5px;">
+            <input type="text" id="busca-usuario" placeholder="🔍 Buscar por nome ou email" class="input-busca" style="min-width: 250px; flex: 1;" />
+
+        </div>
+        <table class="usuarios-table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Nível Atual</th>
+              <th>Alterar Nível</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-usuarios">
+            <!-- JS insere dinamicamente -->
+          </tbody>
+        </table>
+      </section>
+      <section id="produtos" class="aba">
+        <h2>Gerenciar Produtos</h2>
+        <p class="descricao">Adicione, edite e exclua os produtos da loja</p>
+
+        <div class="topo-endereco">
+          <h3>📋 Lista de Produtos</h3>
+          <button id="btn-adicionar-produto" class="botao-adicionar">➕ Novo Produto</button>
+        </div>
+
+        <table class="usuarios-table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome</th>
+              <th>Preço</th>
+              <th>Categoria</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-produtos">
+            <!-- JS insere os produtos aqui -->
+          </tbody>
+        </table>
+        <!-- Modal de Edição de Produto -->
+        <div id="modal-editar-produto" class="modal">
+          <div class="modal-conteudo">
+            <span class="modal-fechar" id="fechar-modal-produto">&times;</span>
+            <h3 id="titulo-modal-produto">✏️ Editar Produto</h3>
+            <form id="form-editar-produto">
+              <input type="hidden" id="edit-id-produto" />
+
+              <div class="form-linha">
+                <input type="text" id="edit-codigo" placeholder="Código" required />
+                <input type="text" id="edit-nome" placeholder="Nome" required />
+              </div>
+
+              <div class="form-linha">
+                <input type="number" id="edit-preco" placeholder="Preço" required step="0.01" />
+                <input type="text" id="edit-categoria" placeholder="Categoria" required />
+              </div>
+
+              <div class="form-linha">
+                <input type="text" id="edit-imagem" placeholder="URL da Imagem" />
+              </div>
+
+              <div class="form-linha">
+                <textarea id="edit-descricao" placeholder="Descrição" rows="4" style="width: 100%;"></textarea>
+              </div>
+
+              <div class="form-botoes">
+                <button type="submit" class="botao-salvar">💾 Salvar Alterações</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="js/painel-admin.js"></script>
+</body>
+
+</html>

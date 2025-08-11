@@ -1,0 +1,52 @@
+.checkout-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.checkout-container h1 {
+  color: #0B3D6D;
+  text-align: center;
+}
+
+#resumo-carrinho, #dados-entrega {
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#lista-checkout {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-checkout li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#total-checkout {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#confirmar-pedido {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  background-color: #0B3D6D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#confirmar-pedido:hover {
+  background-color: #062a4b;
+}

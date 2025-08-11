@@ -1,0 +1,55 @@
+/* produtos.css */
+
+.secao-produtos {
+  padding: 40px 30px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.secao-produtos h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #0B3D6D;
+  text-align: center;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.card-produto {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-produto img {
+  width: 30%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.card-produto h3 {
+  font-size: 16px;
+  color: #222;
+  margin: 10px 0 5px;
+}
+
+.card-produto .preco {
+  color: #0B3D6D;
+  font-weight: bold;
+  font-size: 16px;
+}
